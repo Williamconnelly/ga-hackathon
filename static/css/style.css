@@ -11,6 +11,7 @@ body {
     border: none !important;
     text-align: center;
 }
+
 .nav-logo {
     height: 3em;
     margin-left: 0.7em;
@@ -26,10 +27,9 @@ nav a {
     margin-right: 0.5em;
 }
 
-.modal card img {
+.modal .card-image img {
     height: 10em;
 }
-
 
 .bold {
   font-weight: bold;
@@ -65,4 +65,28 @@ h5 {
   background-color: #f2f2f2;
   box-shadow: 5px 10px #888888;
   padding: 20px;
+}
+
+.card-image img {
+    height: 15em;
+    /* margin: 1px;
+    border: 1px solid black; */
+}
+
+.top-row {
+    margin-top: 1em;
+}
+
+.img-div {
+    background-image: url("../img/home-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 20em;
+}
+
+.home-div h5 {
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 3em;
 }
