@@ -82,6 +82,7 @@ h5 {
     background-size: cover;
     background-position: center;
     height: 20em;
+    margin-top: 2em;
 }
 
 .home-div h5 {
@@ -89,4 +90,8 @@ h5 {
     margin-left: 5em;
     margin-right: 5em;
     margin-top: 3em;
+}
+
+.card a {
+    color: green !important;
 }
