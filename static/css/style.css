@@ -2,3 +2,8 @@
     border: none !important;
     text-align: right;
 }
+
+.center-name {
+    border: none !important;
+    text-align: center;
+}
