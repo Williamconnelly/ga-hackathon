@@ -7,6 +7,10 @@ body {
     text-align: right;
 }
 
+.center-name {
+    border: none !important;
+    text-align: center;
+}
 .nav-logo {
     height: 3em;
     margin-left: 0.7em;
