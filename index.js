@@ -13,8 +13,51 @@ app.use(ejsLayouts);
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
-    res.render('index', {fakeData: fakeData});
+    res.render("categories/index");
 });
+
+fakeData = 
+{
+  city: "Seattle",
+  dropoff_allowed: "TRUE",
+  ecycle: "TRUE",
+  fee: "Free",
+  geolocation: {
+  type: "Point",
+  coordinates: [
+  -122.33422,
+  47.55335
+  ]
+  },
+  geolocation_address: "5511 1st Ave S",
+  geolocation_city: "Seattle",
+  geolocation_zip: "98108",
+  hours: "Mon-Fri: 9am - 5pm Sat: 11am - 5pm Pick Up Service by Appointment",
+  location: "5511 1st Ave S WA 98108",
+  mail_in_allowed: "FALSE",
+  mapping_location: {
+  type: "Point",
+  coordinates: [
+  -122.33422,
+  47.55335
+  ]
+  },
+  mapping_location_address: "5511 1st Ave S",
+  mapping_location_city: "Seattle",
+  mapping_location_zip: "98108",
+  material_handled: "Cell Phones, Smart Phones, Mobile Devices",
+  phone: "(206) 957-2682",
+  pickup_allowed: "TRUE",
+  property_type: "Business, Residents",
+  provider_address: "5511 1st Ave S",
+  provider_name: "3RTechnology, LLC",
+  provider_url: "http://www.3rtechnology.com",
+  providerid: "309",
+  restrictions: "Pick-ups are limited to businesses customers. Call for more information.",
+  service_description: "Accepts cell phones, batteries, PDAs, and accessories for recycling.",
+  tibn: "TRUE",
+  zip: "98108"
+  }
 
 app.get("/api", (req, res) => {
     request("https://data.kingcounty.gov/resource/tzui-ygc5.json?city=Seattle",
@@ -28,40 +71,21 @@ app.get("/api", (req, res) => {
     })
 })
 
-var fakeData = {
-    city: "Seattle",
-    ecycle: "FALSE",
-    geolocation_address: "8105 Fifth Ave. S.",
-    geolocation_zip: "98108",
-    hours: "Thurs-Sat: 9:30am - 4:30pm",
-    location: "8105 Fifth Ave. S. WA 98108",
-    mail_in_allowed: "FALSE",
-    material_handled: "Button Batteries",
-    phone: "(206) 296-4692",
-    pickup_allowed: "FALSE",
-    property_type: "Business, Residents",
-    provider_address: "8105 Fifth Ave. S.",
-    provider_name: "City of Seattle South Hazardous Waste Facility",
-    provider_url: "http://www.lhwmp.org/home/HHW/disposal-locations.aspx#south",
-    providerid: "401",
-    restrictions: "Business waste amounts and types are restricted",
-    service_description: "Accepts button batteries, which are recycled by the Rechargeable Battery Recycling Corporation.",
-    tibn: "FALSE",
-    zip: "98108"
-    }
+app.get("/address", (req, res) => {
+  res.render("address/new")
+})
 
 app.get("/api/fake", (req, res) => {
   res.render("index", {fakeData})
-})
-
-app.get("/index", (req, res) => {
-  res.render("categories/index")
 })
 
 app.get('/results', function(req, res) {
   res.render('results/show');
 });
 
+app.get("/recycle-site", (req, res) => {
+  res.render("centers/center", {center: fakeData})
+})
 
 app.get("/form", (req, res) => {
   res.render('address/new');
