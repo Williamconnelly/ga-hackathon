@@ -11,6 +11,7 @@ body {
     border: none !important;
     text-align: center;
 }
+
 .nav-logo {
     height: 3em;
     margin-left: 0.7em;
@@ -26,6 +27,18 @@ nav a {
     margin-right: 0.5em;
 }
 
-.modal card img {
+.modal .card-image img {
     height: 10em;
+    /* margin: 1px;
+    border: 1px solid black; */
+}
+
+.card-image img {
+    height: 15em;
+    /* margin: 1px;
+    border: 1px solid black; */
+}
+
+.top-row {
+    margin-top: 1em;
 }
