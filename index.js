@@ -51,7 +51,11 @@ var fakeData = {
     }
 
 app.get("/api/fake", (req, res) => {
-    res.render("index", {fakeData})
+  res.render("index", {fakeData})
+})
+
+app.get("/index", (req, res) => {
+  res.render("categories/index")
 })
 
 var server = app.listen(process.env.PORT || 3000);
