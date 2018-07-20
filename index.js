@@ -13,7 +13,7 @@ app.use(ejsLayouts);
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', {fakeData: fakeData});
 });
 
 app.get("/api", (req, res) => {
