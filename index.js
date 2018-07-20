@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 });
 
 app.get("/api", (req, res) => {
-    request("https://data.kingcounty.gov/resource/tzui-ygc5.json?city=Seattle", 
+    request("https://data.kingcounty.gov/resource/tzui-ygc5.json?city=Seattle",
     (err, response, body) => {
         if (err) {
             console.log(err)
@@ -53,6 +53,16 @@ var fakeData = {
 app.get("/api/fake", (req, res) => {
     res.render("index", {fakeData})
 })
+
+app.get('/results', function(req, res) {
+  res.render('results/show');
+});
+
+
+app.get("/form", (req, res) => {
+  res.render('address/new');
+});
+
 
 var server = app.listen(process.env.PORT || 3000);
 
