@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .card-action {
     border: none !important;
     text-align: right;
@@ -6,4 +10,22 @@
 .center-name {
     border: none !important;
     text-align: center;
+}
+.nav-logo {
+    height: 3em;
+    margin-left: 0.7em;
+    margin-top: 0.2em;
+}
+
+nav {
+    background-color: rgba(121, 193, 94, 0.7) !important;
+}
+
+nav a {
+    font-size: 1.2em !important;
+    margin-right: 0.5em;
+}
+
+.modal card img {
+    height: 10em;
 }
