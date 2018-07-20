@@ -13,7 +13,7 @@ app.use(ejsLayouts);
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
-    res.render("categories/index");
+    res.render("home");
 });
 
 fakeData = 
@@ -75,10 +75,6 @@ app.get("/address", (req, res) => {
   res.render("address/new")
 })
 
-app.get("/api/fake", (req, res) => {
-  res.render("index", {fakeData})
-})
-
 app.get('/results', function(req, res) {
   res.render('results/show');
 });
@@ -90,6 +86,10 @@ app.get("/recycle-site", (req, res) => {
 app.get("/form", (req, res) => {
   res.render('address/new');
 });
+
+app.get("/index", (req, res) => {
+  res.render("categories/index")
+})
 
 var server = app.listen(process.env.PORT || 3000);
 
