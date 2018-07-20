@@ -42,3 +42,17 @@ nav a {
 .top-row {
     margin-top: 1em;
 }
+
+.img-div {
+    background-image: url("../img/home-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 20em;
+}
+
+.home-div h5 {
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 3em;
+}
